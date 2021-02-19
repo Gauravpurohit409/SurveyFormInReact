@@ -30,6 +30,8 @@ const Singleselect = (props) => {
 
     const addQuestionAnswers = ()=>{
         props.addQuestionAnswers();
+        setOptions([]);
+    
         
     }
     return (

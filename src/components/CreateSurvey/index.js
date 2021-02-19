@@ -10,15 +10,15 @@ const CreateSurvey = () => {
     const [question,setQuestion] = useState();
     const [answers,setAnswers] = useState([]);
     const [publishQuestions,setPublishQuestions] = useState(false);
-    const getNewId = ()=>{
-        let id = 0;
-        questionAnswers.map((item) => {
-            if (item.id > id)
-                id = item.id;
-        })
+        const getNewId = ()=>{
+            let id = 0;
+            questionAnswers.map((item) => {
+                if (item.id > id)
+                    id = item.id;
+            })
 
-        return id+1;
-    }
+            return id+1;
+        }
 
     const addQuestionAnswers =()=>{
         const newObj = {
@@ -31,7 +31,7 @@ const CreateSurvey = () => {
         setQuestionAnswers(updateQuestionAnswers);
         console.log(updateQuestionAnswers);
         setAnswers([]);
-        setQuestion();
+        setQuestion("");
         document.querySelector("#select").focus();
        
     }
@@ -98,7 +98,7 @@ const CreateSurvey = () => {
 
             {(selectOption === "Multiselect")
             ?
-            <Multiselect questionAnswers = {questionAnswers} deleteOptions = {deleteOptions} publish = {publish} addAnswers = {addAnswers} updateQuestion = {updateQuestion} addQuestionAnswers = {addQuestionAnswers} answers = {answers} />
+            <Multiselect questionAnswers = {questionAnswers} deleteOptions = {deleteOptions} publish = {publish} addAnswers = {addAnswers} updateQuestion = {updateQuestion} addQuestionAnswers = {addQuestionAnswers} answers = {answers} question = {question} />
             :
             (selectOption === "Singleselect")? <Singleselect publish = {publish} addAnswers = {addAnswers} updateQuestion = {updateQuestion} addQuestionAnswers = {addQuestionAnswers}/> :<></>
             }
