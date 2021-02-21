@@ -11,12 +11,12 @@ const MultiselectOptions = (props) => {
     }
    
     return (
-        <>
+        <div>
             <textarea onChange = {props.updateAnswers} id = {getId()} value={optionValue}></textarea>
             <span onClick = {props.moreOptions}>+</span>
             <span id = {props.id} onClick = {props.deleteOptions}>-</span>  
             <br></br>
-        </>
+        </div>
     );
 };
 

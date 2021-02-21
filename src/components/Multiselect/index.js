@@ -58,7 +58,11 @@ const Multiselect = (props) => {
     );
     return (
         <>
-          <textarea onChange= {props.updateQuestion} value = {props.question}></textarea>
+        
+        <div id ="group">
+         <i class="fa fa-question"></i>
+         <textarea onChange= {props.updateQuestion} value = {props.question}></textarea>
+         </div>
           <p>Options</p>
           {addOptions}
           {(options.length === 4)?

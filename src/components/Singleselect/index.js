@@ -41,6 +41,7 @@ const Singleselect = (props) => {
           {addOptions}
           {(options.length === 2)?
             <>
+            
             <button onClick = {addQuestionAnswers}>Add Question</button>
             <button onClick = {props.publish}>Publish</button>
             </>

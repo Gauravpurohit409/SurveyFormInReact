@@ -5,3 +5,19 @@ span{
 
     margin: 3px;
 }
+
+
+#group{
+    width: 100%;
+    display: flex;
+justify-content: center;
+}
+
+i{
+    border:2px solid #E9ECEF;
+    height: 40%;
+    margin-right: -17px;
+    background-color: #E9ECEF;
+    padding: 2px;
+    z-index: 1px !important;
+}
